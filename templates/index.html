@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admission Predictor</title>
+</head>
+<body>
+    <h1>Admission Predictor</h1>
+    <form method="post" action="/predict">
+        <label for="gre_score">GRE Score:</label>
+        <input type="text" name="gre_score" required><br>
+
+        <label for="toefl_score">TOEFL Score:</label>
+        <input type="text" name="toefl_score" required><br>
+
+        <label for="university_rating">University Rating:</label>
+        <input type="text" name="university_rating" required><br>
+
+        <label for="sop">SOP:</label>
+        <input type="text" name="sop" required><br>
+
+        <label for="lor">LOR:</label>
+        <input type="text" name="lor" required><br>
+
+        <label for="cgpa">CGPA:</label>
+        <input type="text" name="cgpa" required><br>
+
+        <label for="research">Research (0 or 1):</label>
+        <input type="text" name="research" required><br>
+
+        <button type="submit">Predict</button>
+    </form>
+
+    <h2>Predicted Chance of Admit: {{ prediction }}</h2>
+
+</body>
+</html>
